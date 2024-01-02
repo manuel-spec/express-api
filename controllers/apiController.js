@@ -43,8 +43,27 @@ const update = async (request, response) => {
 
 }
 
+const get = async (request, response) => {
+    const request_result = validationResult(request)
+    const article = await Article.findById(request.params.id)
+
+
+    if (!request.params.id) {
+        return response.status(400).json({ "error": "article id is required" })
+    }
+
+    if (article) {
+        return response.status(200).json(article)
+    } else {
+        return response.status(400).json({ "error": "article not found !!" })
+    }
+
+}
+
+
+
 
 
 module.exports = {
-    index, create, update
+    index, create, update, get
 }

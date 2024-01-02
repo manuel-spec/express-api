@@ -23,6 +23,8 @@ router.put('/article/:id',
     body('body').notEmpty().withMessage("body is required")
     , apiController.update)
 
+router.get("/article/:id", apiController.get)
+
 
 
 
