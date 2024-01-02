@@ -44,7 +44,6 @@ const update = async (request, response) => {
 }
 
 const get = async (request, response) => {
-    const request_result = validationResult(request)
     const article = await Article.findById(request.params.id)
 
 
@@ -60,10 +59,27 @@ const get = async (request, response) => {
 
 }
 
+const delete_article = async (request, response) => {
+    const article = await Article.findById(request.params.id)
+
+
+    if (!request.params.id) {
+        return response.status(400).json({ "error": "article id is required" })
+    }
+
+    if (article) {
+        await Article.deleteOne({ _id: request.params.id })
+        return response.status(200).json({ "result": "article has been removed !" })
+    } else {
+        return response.status(400).json({ "error": "article not found !!" })
+    }
+
+}
+
 
 
 
 
 module.exports = {
-    index, create, update, get
+    index, create, update, get, delete_article
 }

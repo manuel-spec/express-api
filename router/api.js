@@ -24,6 +24,7 @@ router.put('/article/:id',
     , apiController.update)
 
 router.get("/article/:id", apiController.get)
+router.delete('/article/:id', apiController.delete_article)
 
 
 
