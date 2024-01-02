@@ -34,20 +34,20 @@ Before you begin, ensure you have met the following requirements:
 2. Configure the MongoDB connection in .env : the basic setup is done as example in .env.examples
 
 3. Run the application:
-    ``` bach 
-    npm start```
+    ``` bash 
+        npm start
+    ```
 
 Your CRUD API is now live at `http://localhost:3000`.
 
 
-API Endpoints
+4. API Endpoints
     ```bash
-    POST /api/article: Create a new item.
-    GET /api/article: Get all items.
-    GET /api/article/:id: Get a specific item by ID.
-    PUT /api/article/:id: Update a specific item by ID.
-    DELETE /api/article/:id: Delete a specific item by ID.
-
+        POST /api/article: Create a new item.
+        GET /api/article: Get all items.
+        GET /api/article/:id: Get a specific item by ID.
+        PUT /api/article/:id: Update a specific item by ID.
+        DELETE /api/article/:id: Delete a specific item by ID.
     ```
 
 Contribution
