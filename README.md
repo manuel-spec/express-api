@@ -31,4 +31,25 @@ Before you begin, ensure you have met the following requirements:
    ```bash
     git clone https://github.com/manuel-spec/express-api.git
     ```
-   
+2. Configure the MongoDB connection in .env : the basic setup is done as example in .env.examples
+
+3. Run the application:
+    ``` bach 
+    npm start```
+
+Your CRUD API is now live at `http://localhost:3000`.
+
+
+API Endpoints
+    ```bash
+    POST /api/article: Create a new item.
+    GET /api/article: Get all items.
+    GET /api/article/:id: Get a specific item by ID.
+    PUT /api/article/:id: Update a specific item by ID.
+    DELETE /api/article/:id: Delete a specific item by ID.
+
+    ```
+
+Contribution
+
+Feel free to contribute and make this project even more awesome! Fork the repository, create a new branch, make your changes, and submit a pull request.
